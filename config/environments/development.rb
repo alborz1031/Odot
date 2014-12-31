@@ -35,6 +35,6 @@ Odot::Application.configure do
     :port => 587,
     :domain => "sandbox2953292c239349638465b3ef5df9f32a.mailgun.org",
     :user_name => "postmaster@sandbox2953292c239349638465b3ef5df9f32a.mailgun.org",
-    :password => "MYPASSWORD"
+    :password => "811edd56eff4f2f78906262b746a7b29"
   }
 end
