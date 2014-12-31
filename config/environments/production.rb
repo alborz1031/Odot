@@ -77,4 +77,8 @@ Odot::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Configuring ActionMailer to send and receive email
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {domain: 'app123example.mailgun.org'}
 end
