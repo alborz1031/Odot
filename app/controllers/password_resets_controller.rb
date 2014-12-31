@@ -13,12 +13,6 @@ class PasswordResetsController < ApplicationController
   		flash.now[:notice] = "Email not found."
   		render action: 'new'
   	end
-    @record = Record.new
-
-    if @record.save
-      ModelMailer.new_record_notification(@record).deliver
-      redirect_to @record
-    end
   end
 
   def edit

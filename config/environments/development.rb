@@ -26,15 +26,4 @@ Odot::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-
-  # MailGun
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = {
-    :authentication => :plain,
-    :address => "smtp.mailgun.org",
-    :port => 587,
-    :domain => "sandbox2953292c239349638465b3ef5df9f32a.mailgun.org",
-    :user_name => "postmaster@sandbox2953292c239349638465b3ef5df9f32a.mailgun.org",
-    :password => "811edd56eff4f2f78906262b746a7b29"
-  }
 end
