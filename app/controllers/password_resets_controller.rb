@@ -9,10 +9,16 @@ class PasswordResetsController < ApplicationController
 	    Notifier.password_reset(user).deliver
 	    flash[:success] = "Password reset instructions sent! Please check your email."
 	    redirect_to login_path
-	else
-		flash.now[:notice] = "Email not found."
-		render action: 'new'
-	end
+  	else
+  		flash.now[:notice] = "Email not found."
+  		render action: 'new'
+  	end
+    @record = Record.new
+
+    if @record.save
+      ModelMailer.new_record_notification(@record).deliver
+      redirect_to @record
+    end
   end
 
   def edit
