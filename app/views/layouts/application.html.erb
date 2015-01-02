@@ -9,9 +9,7 @@
 <body>
   <div class="container">
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="nav">
+  <div class="nav">
       <h1><%= link_to "What to do?", root_path %></h1>
       <ul>
         <li><%= link_to "Todo Lists", todo_lists_path %></li>
@@ -23,9 +21,7 @@
         <% end %>
       </ul>
       <br class="clear" />
-    </div>
-    </div>
-  </nav>
+  </div>
 
     <% flash.each do |type, message| %>
     <div class="alert flash <%= type %>">
